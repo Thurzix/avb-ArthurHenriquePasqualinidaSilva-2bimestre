@@ -1,23 +1,24 @@
-import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
-import Home from "../Pages/Home";
-import Detalhes from "../Pages/Detalhes";
-import Favoritos from "../Pages/Favoritos";
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import Home from '../Pages/Home';
+import Detalhes from '../Pages/Detalhes';
+import Favoritos from '../Pages/Favoritos';
 
 export default function AppRoutes() {
     return(
         <>
-        <BrowserRouter>
-            <Link to="/">Home</Link>
-            <Link to="/">Detalhes</Link>
-            <Link to="/">Favoritos</Link>
+            <BrowserRouter>
+                <nav>
+                    <Link to="/">Home</Link>
+                    <Link to="/detalhes">Detalhes</Link>
+                    <Link to="/favoritos">Favoritos</Link>
+                </nav>
 
-            <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/Detalhes" element={<Detalhes />} />
-                <Route path="/Favoritos" element={<Favoritos />} />
-            </Routes>
-        </BrowserRouter>
+                <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/detalhes" element={<Detalhes />} />
+                    <Route path="/favoritos" element={<Favoritos />} />
+                </Routes>
+            </BrowserRouter>
         </>
-    )
-
+    );
 }
