@@ -1,4 +1,7 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
+import Home from "../Pages/Home";
+import Detalhes from "../Pages/Detalhes";
+import Favoritos from "../Pages/Favoritos";
 
 export default function AppRoutes() {
     return(
