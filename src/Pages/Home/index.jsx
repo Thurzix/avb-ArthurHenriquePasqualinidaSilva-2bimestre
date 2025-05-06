@@ -1,5 +1,6 @@
 import axios from "axios"
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function Home() {
   const [posts, setPosts] = useState([]);
@@ -11,7 +12,16 @@ export default function Home() {
 
   return (
     <>
-
+    <div>
+        <h2>Lista dos Posts</h2>
+        <ul>
+            {posts.map((posts) => (
+               <li key={posts.id}>
+                   <Link to={`/detalhes/${posts.id}`}>{posts.title}</Link>
+                </li>
+            ))}
+         </ul>
+    </div>
     </>
   )
 }
