@@ -18,7 +18,7 @@ function App() {
     </div>
   );
 }
-
+/*
 function App2() {
   return (
     <div className="flex flex-col min-h-screen">
@@ -33,5 +33,6 @@ function App2() {
     </div>
   );
 }
+  */
 
 export default App;
