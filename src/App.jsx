@@ -1,39 +1,21 @@
 import './App.css';
-import LoginCard from './Components/LoginCard';
 import Footer from './Components/Footer';
 import Navbar from './Components/Navbar';
 import AppRoutes from './Routes/AppRoutes';
+import { FavoritesProvider } from './Context/FavoritesContext';
 
 function App() {
   return (
-    <div className="flex flex-col min-h-screen">
-      <Navbar />
-
-     
-      <main className="flex-grow">
-        <AppRoutes />
-      </main>
-
-      <Footer />
-    </div>
+    <FavoritesProvider>
+      <div className="flex flex-col min-h-screen">
+        <Navbar />
+        <main className="flex-grow">
+          <AppRoutes />
+        </main>
+        <Footer />
+      </div>
+    </FavoritesProvider>
   );
 }
+
 export default App;
-/*
-function App2() {
-  return (
-    <div className="flex flex-col min-h-screen">
-      <Navbar />
-
-     
-      <main className="flex-grow">
-        <LoginCard />
-      </main>
-
-      <Footer />
-    </div>
-  );
-}
-  */
-
-
