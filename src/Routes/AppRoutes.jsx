@@ -8,9 +8,8 @@ export default function AppRoutes() {
         <>
             <BrowserRouter>
                 <nav>
-                    <Link to="/">Home</Link>
-                    <Link to="/detalhes">Detalhes</Link>
-                    <Link to="/favoritos">Favoritos</Link>
+                    <Link to="/">Home  </Link>
+                    <Link to="/favoritos">  Favoritos</Link>
                 </nav>
 
                 <Routes>
